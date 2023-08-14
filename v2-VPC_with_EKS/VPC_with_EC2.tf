@@ -94,4 +94,8 @@ resource "aws_security_group" "demo-vpc-sg" {
   }
 }
 
+module "sgs" {
+  source = "./sg_eks"
+  vpc_id = aws_vpc.demo-vpc.id
+
 
